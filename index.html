@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html>
+ <head>
+  <title>Homepage</title>
+  <link href="css/homepage.css" type="text/css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ </title>
+ <body>
+  <div class="wrapper">
+   <div class="header">
+    <p class="centered"><img src="images/404_logo.jpg">R.K.G.I.T</p>
+   </div>
+   <nav class="nav-bar">
+    <a href="homepage.html" class="nav-link active">Home</a>
+    <div class="dropdown">
+     <button class="dropbtn">Events</button>
+     <div class="dropdown-content">
+	  <a href="Cricket.html">Cricket</a>
+      <a href="Football.html" >Football</a>
+	  <a href="Vollyball.html">Vollyball</a>
+	  <a href="Badminton.html">Badminton</a>
+	  <a href="Basketball.html">Basketball</a>
+	  <a href="Chess.html">Chess</a>
+     </div>
+    </div>
+	<div class="dropdown">
+	 <button class="dropbtn">Co-ordinators</button>
+     <div class="dropdown-content"> 
+      <a href="Football.html" >Core Commitee</a>
+	  <a href="Vollyball.html">Student Commitee</a>
+	 </div>
+	</div>
+    <a href="contact.html" class="nav-link">Contact</a>
+   </nav>
+  </div>
+  
+  <section class="slide-show">
+   <img src="images/basketball-557192_1920.jpg" class="slides">
+   <img src="images/chess-1215079_1920.jpg" class="slides">
+   <img src="images/the-ball-488718_1920.jpg" class="slides">
+   <p class="text centered title">SPORTS FEST</p>
+  </section>
+  <section class="content">
+   <p class="text centered">This is official website for Sports fest going to be held in RKGIT.
+   All the information related to fest is available here. Those who wants to participate in game
+   can fill the registration form available here.</p> 
+   <button class="register" onclick="document.getElementById('id01').style.display='block'" style="width:auto">Register</button>  
+  </section>
+ 
+  <div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="container">
+      <label><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      <input type="checkbox" checked="checked"> Remember me
+      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="submit" class="form-button signupbtn">Register</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+  <footer>
+   <div class="text centered">
+    <p>Powered by X-creators&copy </p>
+    <div class="icons">
+     <a href="http://www.facebook.com" class="fa fa-facebook-official"></a>
+	 <a href="http://www.twitter.com" class="fa fa-twitter"></a>
+	 <a href="http://www.linkedin.com" class="fa fa-linkedin"></a>
+    </div>
+   </div>
+  </footer>
+  <script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("slides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2000);
+}
+</script>
+
+ </body>
+<html>
